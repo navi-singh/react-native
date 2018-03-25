@@ -18,10 +18,11 @@ import Login from './src/components/Login';
 import Loader from './src/components/Loader';
 import Navigation from './src/components/Navigation';
 import reducers from './src/reducers/PeopleReducer';
+import PeopleList from './src/components/PeopleList';
 
 const store = createStore(
   reducers,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 export default class App extends Component {
   state = {
@@ -54,7 +55,7 @@ export default class App extends Component {
       case false:
         return <Login />;
       default:
-        return <Loader size="large" />
+        return <Loader size="large" />;
     }
   }
 
@@ -73,7 +74,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
+    // alignItems: 'center', // commenting it fixes the blank screen issue with navigator
     backgroundColor: '#F5FCFF',
   },
 });

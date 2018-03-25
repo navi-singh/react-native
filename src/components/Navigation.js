@@ -11,12 +11,13 @@ const Navigation = TabNavigator({
     tabBarOptions: {
         activeTintColor: 'white',
         inactiveTintColor: '#80cbc4',
-        swipeEnabled: true,
-        showLabel: false,
+        showLabel: true,
+        activeTintColor: 'white',
         style: {
             backgroundColor: '#26a69a',
         },
     },
+    swipeEnabled: true,
 });
 
 export default Navigation;

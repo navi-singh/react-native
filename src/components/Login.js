@@ -93,9 +93,9 @@ export default class Login extends Component {
   render() {
     return (
       <View style = {styles.form}>
-      <Text>
-        Login or create an account
-      </Text>
+        <Text>
+          Login or create an account
+        </Text>
         <MKTextField
           text={this.state.email}
           onTextChange={email => this.setState({ email })}
