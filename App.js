@@ -13,16 +13,18 @@ import {
 } from 'react-native';
 import * as firebase from 'firebase';
 import { Provider} from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import Login from './src/components/Login';
 import Loader from './src/components/Loader';
 import Navigation from './src/components/Navigation';
 import reducers from './src/reducers/PeopleReducer';
 import PeopleList from './src/components/PeopleList';
+import Thunk from 'redux-thunk';
 
 const store = createStore(
   reducers,
-   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+	 window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+	 applyMiddleware(Thunk)
 );
 export default class App extends Component {
   state = {

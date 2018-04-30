@@ -92,30 +92,32 @@ export default class Login extends Component {
 
   render() {
     return (
-      <View style = {styles.form}>
-        <Text>
-          Login or create an account
-        </Text>
-        <MKTextField
-          text={this.state.email}
-          onTextChange={email => this.setState({ email })}
-          textInputStyle={styles.fieldStyles}
-          placeholder={'Email....'}
-          tintColor={MKColor.Teal}
-        />
-        <MKTextField
-          text={this.state.password}
-          onTextChange={password => this.setState({ password })}
-          textInputStyle={styles.fieldStyles}
-          placeholder={'password....'}
-          tintColor={MKColor.Teal}
-          password={true}
-        />
-        <Text style = {styles.errorMessage}>
-          {this.state.error}
-        </Text>
-        <View style={styles.loginButtonArea}>
-          {this.renderLoader()}
+      <View style={styles.container}>
+        <View style = {styles.form}>
+          <Text>
+            Login or create an account
+          </Text>
+          <MKTextField
+            text={this.state.email}
+            onTextChange={email => this.setState({ email })}
+            textInputStyle={styles.fieldStyles}
+            placeholder={'Email....'}
+            tintColor={MKColor.Teal}
+          />
+          <MKTextField
+            text={this.state.password}
+            onTextChange={password => this.setState({ password })}
+            textInputStyle={styles.fieldStyles}
+            placeholder={'password....'}
+            tintColor={MKColor.Teal}
+            password={true}
+          />
+          <Text style = {styles.errorMessage}>
+            {this.state.error}
+          </Text>
+          <View style={styles.loginButtonArea}>
+            {this.renderLoader()}
+          </View>
         </View>
       </View>
     );

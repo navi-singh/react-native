@@ -10,6 +10,7 @@ import { connect } from 'react-redux';
 import PeopleItem from './PeopleItem';
 import Icon from 'react-native-vector-icons/EvilIcons';
 import PeopleDetail from './PeopleDetail'
+import { loadInitialContext } from '../actions';
 
 const styles = StyleSheet.create({
   container: {
@@ -32,6 +33,10 @@ const styles = StyleSheet.create({
       />
     )
   }
+
+	componentWillMount() {
+		
+	}
 
   renderInitalView() {
     const ds = new ListView.DataSource({
